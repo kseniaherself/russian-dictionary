@@ -5,7 +5,7 @@ Sourse file: odict.csv
 
 
 The code creates files: 
-+ lexemes_russian_v1.tsv
++ \*lexemes_russian_v1.tsv\*
   - list of all lexemes presented in the original dictionary 
 + wordforms_russian_v1.tsv 
   - (wordforms_russian_p1_v1.tsv and wordforms_russian_p2_v1.tsv) 
