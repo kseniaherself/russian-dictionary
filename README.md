@@ -1,4 +1,4 @@
-# russian-dictionary
+# russian dictionary
 The repository contains code that prepares data for further processing.
 
 Sourse file: *odict.csv*
