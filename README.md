@@ -12,3 +12,6 @@ The code creates files:
   - list of all wordforms presented in the original dictionary
 + *grammar_tags_russian_v3.tsv*
   - list of grammar tags used in the original dictionary 
+
+
+(*_v_3* is the latest update) 
