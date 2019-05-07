@@ -32,16 +32,16 @@ def F_all_wordforms_and_grammar():
     all_wordforms = 'wordform'
     all_grammar_t = 'grammar_tags'
 
-    F_write_file_w(all_lexemes, 'lexemes_russian_v1.tsv')
-    F_write_file_w(all_wordforms, 'wordforms_russian_v1.tsv')
-    F_write_file_w(all_grammar_t, 'grammar_tags_russian_v1.tsv')
+    F_write_file_w(all_lexemes, 'lexemes_russian_v3.tsv')
+    F_write_file_w(all_wordforms, 'wordforms_russian_v3.tsv')
+    F_write_file_w(all_grammar_t, 'grammar_tags_russian_v3.tsv')
 
     all_grammar_l = []
 
     f_1 = F_get_lines('odict.csv')
 
-    for i in range(0, 102375):              # вся выборка
-    #for i in range(0, 50):               # тестовая выборка
+    #for i in range(0, 102375):              # вся выборка
+    for i in range(0, 102375):               # тестовая выборка
         print('\t', i)
         #print(f_1[i])
         f_1[i] = f_1[i].replace('\n', '')
@@ -52,18 +52,18 @@ def F_all_wordforms_and_grammar():
 
         #all_lexemes = all_lexemes + '\n' + wordforms_list[0]
         #print(wordforms_list[0])
-        F_write_file_a(('\n' + wordforms_list[0]), 'lexemes_russian_v1.tsv')
+        F_write_file_a(('\n' + wordforms_list[0]), 'lexemes_russian_v3.tsv')
 
         if wordforms_list[1] not in all_grammar_l:
             all_grammar_l.append(wordforms_list[1])
             print(wordforms_list[1])
-            F_write_file_a(('\n' + wordforms_list[1]), 'grammar_tags_russian_v1.tsv')
+            F_write_file_a(('\n' + wordforms_list[1]), 'grammar_tags_russian_v3.tsv')
 
         for j in range(0, len(wordforms_list)):
             if (j != 1) and (wordforms_list[j] != ''):
                 #all_wordforms = all_wordforms + '\n' + wordforms_list[j]
                 #print(wordforms_list[j])
-                F_write_file_a(('\n' + wordforms_list[j]), 'wordforms_russian_v1.tsv')
+                F_write_file_a(('\n' + wordforms_list[j]), 'wordforms_russian_v3.tsv')
 
     #for elem in all_grammar_l:
     #    all_grammar_t = all_grammar_t + '\n' + elem
@@ -75,8 +75,11 @@ def F_all_wordforms_and_grammar():
     #F_write_file_w(all_grammar_t, 'grammar_tags_russian_v1.tsv')
 
 
-F_all_wordforms_and_grammar()
+#F_all_wordforms_and_grammar()
 
+all_lines = F_get_lines('odict.csv')
+print(len(all_lines))
+print(all_lines[-1])
 
 # ещё нужен файл с просто начальными словоформами
 print('--- %.5s seconds ---' % (time.time() - start_time))
